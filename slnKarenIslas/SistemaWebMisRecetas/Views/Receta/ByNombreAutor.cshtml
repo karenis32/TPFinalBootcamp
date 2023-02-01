@@ -1,0 +1,51 @@
+﻿@model IEnumerable<SistemaWebMisRecetas.Models.Receta>
+
+@{
+    ViewData["Title"] = "Recetas por Autor";
+}
+
+<h2>Recetas por Autor</h2>
+
+@Html.ActionLink("Volver a index","Index","Receta")
+<table>
+    <tr>
+        <th>Titulo</th>
+        <th>Categoria</th>
+        <th>Ingredientes</th>
+        <th>Instrucciones</th>
+        <th>Autor</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>Email</th>
+
+    </tr>
+@foreach (var item in Model)
+{
+                           <tr> 
+                            <td>
+                @Html.DisplayFor(modelItem=>item.Titulo)
+            
+                            </td>
+                                 <td>
+                @Html.DisplayFor(modelItem=>item.Categoria)
+                                </td>
+                                    <td>
+                @Html.DisplayFor(modelItem=>item.Ingredientes)
+                                    </td>
+                            <td>
+                @Html.DisplayFor(modelItem=>item.Instrucciones)
+                                    </td>
+                            <td>
+                @Html.DisplayFor(modelItem=>item.Autor)
+                              </td>
+                              <td>
+                @Html.DisplayFor(modmodelItemel=>item.Apellido)
+                            </td>
+                        <td>
+                @Html.DisplayFor(modelItem=>item.Edad)
+                                </td>
+                            <td>
+                @Html.DisplayFor(modelItem=>item.Email)
+                                </td>
+                        </tr>
+    }</table>
