@@ -4,7 +4,7 @@
     ViewData["Title"] = "Detalle";
 }
     <h2>Ver Detalle</h2>
-@Html.ActionLink("Volver a index","Index","Receta")
+@Html.ActionLink("Volver","Index","Receta")
 
     <p>
     @Html.DisplayNameFor(model=>model.Titulo)
@@ -38,3 +38,6 @@
     @Html.DisplayNameFor(model=>model.Email)
     @Html.DisplayFor(model=>model.Email)
     </p>
+
+@Html.ActionLink("Editar","Editar","Receta",new{id= Model.Id})
+@Html.ActionLink("Eliminar","Delete","Receta",new{id= Model.Id})

@@ -1,14 +1,95 @@
-﻿<!DOCTYPE html>
+﻿@*<!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="~/css/site.css" rel="stylesheet" type="text/css" />
+<link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="container">
+        <div>
+            <header id="header">
+                <h1> Mis recetas</h1>
+            </header>
+         </div>
+    <main>
+        <div id="renderbody">
+
+            @RenderBody()
+
+        </div> 
+       
+        <div id="sidebarR">
+            @if (IsSectionDefined("SideBar"))
+            {
+            @RenderSection("SideBar")
+            <img src="~/imagenes/desayuno1.jpeg"/>
+            <img src="/imagenes/desayuno2.jpg"/>
+            <img src="/imagenes/desayuno3.jpg"/>
+            }
+            else
+            {
+             <h2>Zona Sidebar Fija</h2>
+            }    
+        </div>        
+
+    </main>
+        <div>
+            <footer>
+                info@Recetas.com
+            </footer>
+        </div>
     </div>
+
+</body>
+</html>
+*@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="leftHeader"></div>
+            <div id="rightHeader">
+                <h1>Mis recetas</h1>
+            </div>
+        </header>
+        <aside></aside>
+        <main>
+            <div id="renderbody">
+                @RenderBody()
+            </div> 
+        </main>
+        <aside id="aside-2">
+            @if (IsSectionDefined("SideBar"))
+            {
+                @RenderSection("SideBar")
+                <img src="~/imagenes/desayuno1.jpeg"/>
+                <img src="/imagenes/desayuno2.jpg"/>
+                <img src="/imagenes/desayuno3.jpg"/>
+            }
+            else
+            {
+                @Html.ActionLink("Nueva receta","Create","Receta")
+                <br />
+                @Html.ActionLink("Volver al Inicio","Index","Home")
+            }  
+        </aside>
+
+        <footer>
+                info@Recetas.com
+        </footer>
+
+    </div>
+
+
 </body>
 </html>

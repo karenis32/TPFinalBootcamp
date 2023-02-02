@@ -6,7 +6,6 @@ namespace SistemaWebMisRecetas.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.Titulo = "Bienvenido a Tus Recetas";
             return View();
         }
     }

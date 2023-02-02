@@ -1,71 +1,126 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+body, h1, h2, h3, p {
+    margin: 0;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+.container {
+    color: white;
+    text-align: center;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1.5fr 1fr 1fr;
+    grid-template-rows: 15vh auto 5vh;
+    grid-template-areas:
+        "header header header header header"
+        "aside  main   main   main   aside2"
+        "footer footer footer footer footer";
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
+    .container header {
+        background: white;
+        grid-area: header;
+        overflow: hidden;
+        grid-area: header;
+        line-height: 7vh;
+        display: flex;
+        text-align: left;
+        font-family: 'Seymour One', sans-serif;
+        vertical-align: middle;
+    }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
+        .container header h1 {
+            font-weight: normal !important;
+        }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+        .container header #leftHeader {
+            width: 15%;
+            background-color: rosybrown;
+            margin-right: 3px;
+        }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
+        .container header #rightHeader {
+            background-color: saddlebrown;
+            width: 85%;
+            margin-left: 3px;
+            padding-left: 7px;
+        }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
+    .container nav {
+        background: saddlebrown;
+        overflow: hidden;
+        grid-area: nav;
+        line-height: 3.5vh;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flexbox;
+    }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
+        .container nav a {
+            color: gray;
+            cursor: pointer;
+            text-decoration: none;
+            padding-left: 4px;
+            padding-right: 4px;
+            font-size: small;
+        }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    .container aside {
+        background: white;
+        overflow: hidden;
+        grid-area: aside;
+    }
+
+
+        .container aside#aside-2 {
+            background: saddlebrown;
+            overflow: hidden;
+            grid-area: aside2;
+            text-align: left;
+            padding: 10px;
+            text-align: center;
+            min-height: 600px;
+        }
+
+        .container aside#aside-2 a {
+            color: white !important;
+            cursor:pointer;
+        }
+
+    .container main #ContenedorImagenAside2 {
+        max-width: 500px;
+    }
+
+    .container main {
+        background: white;
+        text-align: left;
+        overflow: hidden;
+        grid-area: main;
+        padding: 10px;
+        height: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: 15px;
+        color:black;
+    }
+
+        .container main li {
+            color: white;
+            line-height: 25px;
+        }
+
+            .container main li span {
+                color: khaki;
+            }
+
+    .container footer {
+        background: saddlebrown;
+        color: #333;
+        overflow: hidden;
+        grid-area: footer;
+        line-height: 5vh;
+        color: white;
+    }
+img {
+    width: 300px;
 }

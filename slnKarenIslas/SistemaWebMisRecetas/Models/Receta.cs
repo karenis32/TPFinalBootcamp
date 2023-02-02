@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using SistemaWebMisRecetas.Validations;
+using System;
 
 namespace SistemaWebMisRecetas.Models
 {
@@ -46,5 +47,12 @@ namespace SistemaWebMisRecetas.Models
         [Column(TypeName = "varchar(2000)")]
         [StringLength(2000)]
         public string Instrucciones { get;set; }
+
+        [Required]
+        public DateTime? FechaCreado { get; set; }
+        [Required]
+        public DateTime? FechaActualizado { get; set; }
+
+
     }
 }

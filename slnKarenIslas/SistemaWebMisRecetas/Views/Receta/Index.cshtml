@@ -3,26 +3,27 @@
 @{
     ViewData["Title"] = "Index Recetas";
 }
-
+    <h2>Lista de Recetas</h2>
+    <br />
      <table>
         <tr>
-            <h1>Lista de Recetas</h1>
+           <th>Receta</th>
+           <th>Autor</th>
+            <th>Creado</th>
+           <th>Modificado</th>
+
         </tr>
 
     @foreach (var item in Model)
     {
-                       <tr> 
-                        <td>
-                @Html.ActionLink(item.Titulo,"Details","Receta",new{id=item.Id })
-                        </td>
-                             <td>
-                @Html.ActionLink(item.Autor,"ByNombreAutor","Receta", new{autor=item.Autor})
-                            </td>
-                        <td>
-               @*@Html.ActionLink("Eliminar","Delete","Opera",new{id=item.Id })*@
-                        </td>
-                    </tr>
+                <tr> 
+                <td>
+                    @Html.ActionLink(item.Titulo,"Details","Receta",new{id=item.Id })
+                </td>
+                <td>
+                    @Html.ActionLink(item.Autor,"ByNombreAutor","Receta", new{autor=item.Autor})
+                </td>
+            </tr>
 
-    }
-    @Html.ActionLink("Nuevo","Create","Receta")
+    }    
     </table>

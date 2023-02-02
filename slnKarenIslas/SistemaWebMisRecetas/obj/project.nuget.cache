@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wH4RFclyq0P1gzujhBg+1sS3xKElq55jk/LxmjdHZpj942eJU/qG7rlQpwvF6uS/Bb050bB4SLdXMBUm/J7z1g==",
+  "dgSpecHash": "E/o6rG/cobjEJ2m6IYc8c2nKyaTdNAxiVXegq3xMFKLhP6ORqDMrwKL+5rUt/LaEPH+MFDSN9b0RgYMudi9VUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Bootcamp C#\\Web Api .NET Core\\slnKarenIslas\\SistemaWebMisRecetas\\SistemaWebMisRecetas.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Bootcamp C#\\Web Api .NET Core\\TPFinalBootcamp\\slnKarenIslas\\SistemaWebMisRecetas\\SistemaWebMisRecetas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
